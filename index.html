@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Chilled Magic</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+<section id="banner">
+	<div class="banner-text">
+		<h1>Chilled Magic</h1>
+		<p>lo-fi is life</p>
+		<div class="banner-btn">		
+			<a href="https://discord.gg/mqU77QYwBy" target="_blank"><span></span> Discord Server </a>
+			<a href="https://www.youtube.com/channel/UCpnS3x6uye5-tUx_asYHvSg" target="_blank"><span></span> Youtube </a>
+		</div>
+	</div>
+</section>
+
+<div id="sideNav">
+	<nav>
+	<ul>
+		<li><a href="#" style="color: #fff;">HOME</a></li>
+		<li><a href="about_us.html" style="color: #fff;">ABOUT US</a></li>
+	</ul>
+	</nav>
+</div>
+<div id="menuBtn">
+	<img src="images/menu.png" id="menu">
+</div>
+
+<script>
+var menuBtn = document.getElementById("menuBtn")
+var sideNav = document.getElementById("sideNav")
+var menu = document.getElementById("menu")
+
+sideNav.style.top = "-100vh";
+
+menuBtn.onclick = function(){
+
+	if(sideNav.style.top == "-100vh"){
+		sideNav.style.top = "0";
+	}
+	else{
+		sideNav.style.top = "-100vh";
+	}
+}
+</script>
+
+</body
+</html>
