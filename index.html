@@ -5,6 +5,14 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Itim&family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&family=Spartan&family=Teko&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+<!--font-family: 'Archivo Narrow', sans-serif;
+font-family: 'Spartan', sans-serif;
+font-family: 'Teko', sans-serif;
+font-family: 'Poppins', sans-serif;-->
+
 </head>
 <body>
 <section id="banner">
@@ -16,37 +24,107 @@
 			<a href="https://www.youtube.com/channel/UCpnS3x6uye5-tUx_asYHvSg" target="_blank"><span></span> Youtube </a>
 		</div>
 	</div>
+		<div class="music-content">
+			<p>lo-fi hip hop mix</p>
+			<img src="Images/play.png" id="icon">
+		</div>
 </section>
+
+<!--audio player-->
+
+<audio id="Song">
+	<source src="Images/lofi.mp3" type="audio/mp3">
+</audio>
+
+<script>
+	var Song = document.getElementById("Song");
+	var icon = document.getElementById("icon");
+
+icon.onclick = function(){
+	if(Song.paused){
+		Song.play();
+		icon.src = "Images/pause.png";
+	}
+	else{
+		Song.pause();
+		icon.src = "Images/play.png";
+	}
+}
+
+</script>
+
+<!--audio player-->
 
 <div id="sideNav">
 	<nav>
 	<ul>
-		<li><a href="#" style="color: #fff;">HOME</a></li>
-		<li><a href="about_us.html" style="color: #fff;">ABOUT US</a></li>
+		<li><a href="index.html" style="color: #165c95;">HOME</a></li>
+		<li><a href="about_us.html" style="color: #165c95;">ABOUT US</a></li>
 	</ul>
 	</nav>
 </div>
-<div id="menuBtn">
-	<img src="Images/menu.png" id="menu">
+
+<div class="circle">
+	<img src="Images/logo.png">
 </div>
+
+<div id="menuBtn">
+	<img src="images/menu.png" id="menu">
+</div>
+
+<!-- Side Nav's function code -->
 
 <script>
 var menuBtn = document.getElementById("menuBtn")
 var sideNav = document.getElementById("sideNav")
 var menu = document.getElementById("menu")
 
-sideNav.style.top = "-100vh";
+sideNav.style.right = "-250px";
 
 menuBtn.onclick = function(){
 
-	if(sideNav.style.top == "-100vh"){
-		sideNav.style.top = "0";
+	if(sideNav.style.right == "-250px"){
+		sideNav.style.right = "0";
 	}
 	else{
-		sideNav.style.top = "-100vh";
+		sideNav.style.right = "-250px";
 	}
 }
 </script>
 
-</body
+
+
+<!--Side Nav's code end-->
+<section id="features">
+	<div class="support">
+		<p>FEATURES</p>
+		<h1>How you can support us</h1>
+	</div>
+
+	<div class="support-box">
+		<div class="supports">
+			<h1>Submitting Your Music</h1>
+		</div>
+		<div class="support-desc">
+			<div class="support-icon">
+				
+			</div>
+			<div class="support-text">
+				<p>You can help us by submitting your music. Your
+					music must be originally made by you. You 
+					must submit your name and social media links 
+					along with the music and the name of the music.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="last">
+	<div class="last-text">
+		<h1>More Coming Soon..</h1>
+		<hr>
+	</div>
+</section>
+
+</body>
 </html>
